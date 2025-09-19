@@ -3,7 +3,7 @@ import React from "react"
 function Counter(){
     var [count,setCountfn]=React.useState(10)
     function incCount(){
-        setCountfn(count+10)
+        setCountfn(count+10);
     }
     function inc(){
         setCountfn(count+100)
