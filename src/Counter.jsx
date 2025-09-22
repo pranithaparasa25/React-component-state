@@ -1,18 +1,20 @@
 import { useState } from "react";
 
-function Counter(){
-    var [count,setCountfn]=useState(0)
+function Counter(x){
+    console.log(x)
+    var [count,setCountfn]=useState(x.a)
     function incCount(){
-        setCountfn(count+1)
+        setCountfn(count+x.b)
     }
     function decCount(){
-        setCountfn(count-1)
+        setCountfn(count-x.b)
     }
     return(
-        <div>
-            <h1>Counter::</h1>
+        <div  className='border border-2 border-info p-3 m-2'>
+            <h1>Counter::{count}</h1>
             <button onClick={()=>{incCount()}}>Inc</button>
             <button onClick={()=>{decCount()}}>Dec</button>
+            
         </div>
     )
 }
